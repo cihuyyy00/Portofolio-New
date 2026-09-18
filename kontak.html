@@ -41,17 +41,37 @@
           </p>
           <div class="contact-links">
             <a href="mailto:moezakieeey@gmail.com">moezakieeey@gmail.com ↗</a
-            ><a href="https://api.whatsapp.com/send/?phone=%2B6282135496397&text&type=phone_number&app_absent=0">+62 821 3549 6397 ↗</a>
+            ><a href="tel:+6282135496397">+62 821 3549 6397 ↗</a>
           </div>
         </article>
         <form
           class="panel"
           action="https://api.web3forms.com/submit"
           method="post"
-          enctype="text/plain"
+          data-web3forms
         >
-          <input type="hidden" name="access_key" value="cb37209d-dd42-47d6-ac16-df2d191d78f8">
-          
+          <input
+            type="hidden"
+            name="access_key"
+            value="cb37209d-dd42-47d6-ac16-df2d191d78f8"
+          />
+          <input
+            type="hidden"
+            name="subject"
+            value="Pesan baru dari portofolio Faridh Muzakki"
+          />
+          <input
+            type="hidden"
+            name="from_name"
+            value="Portofolio Faridh Muzakki"
+          />
+          <input
+            type="checkbox"
+            name="botcheck"
+            class="hidden-field"
+            tabindex="-1"
+            autocomplete="off"
+          />
           <h2>Send a message</h2>
           <div class="form-row">
             <label
@@ -70,11 +90,12 @@
           </div>
           <label
             >Pesan<textarea
-              name="pesan"
+              name="message"
               placeholder="Ceritakan sedikit tentang proyekmu..."
               required
             ></textarea></label
           ><button class="btn btn-primary" type="submit">Kirim pesan ↗</button>
+          <p class="form-status" role="status" aria-live="polite"></p>
         </form>
       </section>
     </main>
