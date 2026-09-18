@@ -24,7 +24,7 @@ web3Forms.forEach((form) => {
     const button = form.querySelector('button[type="submit"]');
     const accessKey = form.querySelector('[name="access_key"]').value;
 
-    if (accessKey === "cb37209d-dd42-47d6-ac16-df2d191d78f8") {
+    if (!accessKey || accessKey === "cb37209d-dd42-47d6-ac16-df2d191d78f8") {
       status.textContent = "Masukkan access key Web3Forms terlebih dahulu.";
       status.className = "form-status error";
       return;
