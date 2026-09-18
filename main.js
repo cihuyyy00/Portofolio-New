@@ -2,6 +2,7 @@ const hamber = document.querySelector(".hamber");
 const menu = document.querySelector(".menu");
 const startIcon = document.querySelector(".start");
 const closeIcon = document.querySelector(".close");
+const WEB3FORMS_ACCESS_KEY = "cb37209d-dd42-47d6-ac16-df2d191d78f8";
 
 if (hamber && menu) {
   if (window.innerWidth <= 760) menu.classList.remove("tampil");
@@ -22,9 +23,11 @@ web3Forms.forEach((form) => {
 
     const status = form.querySelector(".form-status");
     const button = form.querySelector('button[type="submit"]');
-    const accessKey = form.querySelector('[name="access_key"]').value;
+    const accessKeyField = form.querySelector('[name="access_key"]');
+    accessKeyField.value = WEB3FORMS_ACCESS_KEY;
+    const accessKey = accessKeyField.value;
 
-    if (!accessKey || accessKey === "cb37209d-dd42-47d6-ac16-df2d191d78f8") {
+    if (!accessKey) {
       status.textContent = "Masukkan access key Web3Forms terlebih dahulu.";
       status.className = "form-status error";
       return;
